@@ -1,0 +1,485 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url('../images/16.jpg');
+    overflow: hidden;
+}
+.start{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9;
+    /*background: url('../images/start-bg1.gif') no-repeat;*/
+    /*left: 0%;*/
+}
+.start1{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: url('../images/start-bg1.gif') no-repeat;
+    left: 0%;
+    /*animation: go-1 1s linear 1;*/
+    animation-fill-mode: forwards;
+}
+@keyframes go-1{
+    0%{
+        left: 0%;
+    }
+   
+    100%{
+        left: -50%;
+    }
+}
+.start2{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: url('../images/start-bg2.gif') no-repeat;
+    left: 50%;
+    /*animation: go-2 1s linear 1;*/
+    animation-fill-mode: forwards;
+}
+@keyframes go-2{
+    0%{
+        left: 50%;
+    }
+   
+    100%{
+        left: 100%;
+    }
+}
+.start_game{
+    width: 445px;
+    height: 202px;
+    background: url('../images/start.gif') no-repeat;
+    position: absolute;
+    margin-top: 27%;
+    margin-left: 36%;
+    /*animation: go-3 1s linear 1;*/
+    animation-fill-mode: forwards;
+    /*transform-origin: 1px 1px 1px;*/
+}
+.start_game:hover{
+    transform: scale(1.5);
+    cursor:pointer;
+}
+@keyframes go-3{
+    0%{
+        transform: scale(1) rotateZ(0deg);
+    }
+   
+    100%{
+        transform: scale(0) rotateZ(3600deg);
+    }
+}
+
+
+li{
+    list-style: none;
+}
+.left{
+    width:20%;
+    height: 800px;
+    float: left;
+    /*background: red;*/
+}
+.mid{
+    width:60%;
+    height: 800px;
+    float: left;
+    /*background: blue;*/
+}
+.mid_top{
+    width: 100%;
+    height: 500px;
+    float: left;
+    /*background: #000;*/
+}
+
+.mid_mid{
+    width:100%;
+    height:300px;
+    float:left;
+}
+
+.mid_end{
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin: -150px 0 0 0;
+    /*background: #fff;*/
+}
+.right{
+    width:20%;
+    height: 800px;
+    float: right;
+    /*background: yellow;*/
+}
+
+.all_poker{
+    width: 125px;
+    height: 175px;
+    margin: 100px auto 0px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    /*background: #fff;*/
+}
+.all_poker li,.desktop_poker li{
+    position: absolute;
+}
+
+.desktop_poker{
+    width:125px;
+    height:175px;
+    margin:-100px auto 0;
+    position:relative;
+}
+
+.temp_poker{
+    width: 125px;
+    height: 175px;
+    margin: 100px auto 0px;
+    position: relative;
+}
+.back {
+    width:128px;
+    height: 178px;
+    border-radius: 10px;
+    background: url('../images/14.png') -86px -224px;
+    position: absolute;
+    z-index: 100;
+    transform-origin: 50px 290% 0;
+}
+.play_1, .play_2, .play_3{
+    width:125px;
+    height: 175px;
+    margin: 20px auto 0px;
+    position: relative;
+}
+.play_1{
+    transform:rotateZ(90deg);
+}
+.play_3{
+    transform:rotateZ(-90deg);
+    margin:650px 0 0 110px ;
+}
+.play_1 li,.play_2 li,.play_3 li{
+    position: absolute;
+}
+
+.play_btn, .play_btn2{
+    display:none;
+    text-align: center;
+}
+.get, .cancel, .play_out, .pass,.hint{
+    background:url(../images/button.png) no-repeat;
+    width: 100px;
+    height: 50px;
+    font-size:20px;
+    border:none;
+}
+.get:hover, .cancel:hover, .play_out:hover, .pass:hover,.hint:hover{
+    cursor:pointer;
+}
+/*.button:link{
+    
+}*/
+.interval{
+    display:none;
+    width:134px;height:133px;
+    font-size:22px;
+    position:absolute;
+    margin:-300px 0 0 90px;
+    padding: 45px 0 0 52px;
+    background:url(../images/time.png) no-repeat;
+    text-align:center;
+}
+.get{
+    z-index: 999;
+}
+
+.play_2 .select {
+    top:-20px;
+}
+.play_1 .select,.play_3 .select {
+    top:-20px;
+}
+
+.left .play_btn,.left .play_btn2 {
+    margin: 0 -225px 0 0;
+    transform:rotateZ(90deg);
+}
+.left .interval{
+    margin: 80px 0 0 280px;
+}
+.right .interval{
+    margin: -200px 0 0 -100px;
+}
+.right .play_btn,.right .play_btn2{
+    margin: -360px 0 0 -265px;
+    transform:rotateZ(-90deg);
+
+}
+.end{/*  / / xyt0314 */
+    display: none;
+    width: 766px;
+    height: 523px;
+    position: absolute;
+    font-weight: bolder;
+    top: 30%;
+    left: 40%;
+    margin: -150px 0 0 -259px;
+    background: url(../images/bg.png);
+}
+
+.end h3 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, .7);
+    line-height: 50px;
+    text-align: center;
+}
+
+.end span {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #777;
+    background: rgba(255, 255, 255, .7);
+
+    text-align: center;
+    float: left;
+}
+
+/*.end button{*/
+/*margin: 50px 0 0 125px;*/
+/*}  */
+
+.end .more{/*//xyt0314*/
+    width: 100px;
+    height: 20px;
+    margin: 188px auto;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+.end .leave{/*//xyt0314*/
+    width: 100px;
+    height: 20px;
+    margin: -150px auto;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+/*.text,.text1,.text2,.text11{
+    display:block;
+    width:100px;height:40px;
+    font-weight:bold;
+    font-size:28px;
+    color:white;
+
+} */
+.left .text,.left .text1,.left .text11{
+    display:none;
+    position:absolute;
+    width:50%;height:40px;
+    font-weight:bold;
+    font-size:28px;
+    color:white;
+    margin:300px 0 0 -100px;
+    transform:rotateZ(90deg);
+}
+.mid .text,.mid .text1,.mid .text11{
+    display:none;
+    position:absolute;
+    width:50%;height:40px;
+    font-weight:bold;
+    font-size:28px;
+    color:white;
+    margin:-290px 0 0 260px;
+}
+.right .text,.right .text1,.right .text11{
+    display:none;
+    position:absolute;
+    width:50%;height:40px;
+    font-weight:bold;
+    font-size:28px;
+    color:white;
+    margin:-560px 0 0 -480px;
+    transform:rotateZ(-90deg);
+}
+.text2{
+    width:50%;
+    position:absolute;
+    font-weight:bold;
+    font-size:28px;
+    color:white;
+    top:50%;left:21%;
+    text-align:center;
+}
+
+/*.play_btn2{
+    display: none;
+    text-align: center;
+}*/
+
+
+
+.roles{
+    position: absolute;
+    display: block;
+}
+
+.roles img{
+    display: none;
+}
+
+.left .roles{
+    left: 280px;
+    top: 692px;
+    transform: rotateZ(90deg);
+}
+
+.mid_end .roles{
+    left: 1265px;
+    bottom: 270px;
+}
+
+.right .roles{
+    right: 305px;
+    top: 100px;
+    transform: rotateZ(-90deg);
+}
+
+/*添加*/
+.mask{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    opacity: 0.6;
+    z-index: 9;
+}
+.animation-mask{
+    display: none;
+    width: 1280px;
+    height: 745px;
+    position: fixed;
+    z-index: 10;
+    margin-left: 100%;
+    margin-top: 100px;
+    animation: effect 2s ease 1;
+}
+.effect-1{
+    background: url('../images/theKingBoom.jpg');
+}
+.effect-2{
+    background: url(../images/timg.jpg) no-repeat;
+}
+.effect-3{
+    background: url(../images/plan.jpg) no-repeat;
+}
+.anthor{
+    display: none;
+    width: 1280px;
+    height: 745px;
+    position: fixed;
+    z-index: 10;
+    margin-left: 33%;
+    margin-top: 200px;
+    animation: effect-2 1s ease 1;
+}
+.lose{
+    background: url(../images/lose.jpg) no-repeat;
+}
+.lose_s{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 0px;
+    margin-left: 16%;
+    animation: effect-2 1s ease 1;
+}
+.win{
+    background: url(../images/fuck.jpg) no-repeat;
+}
+.win_s{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 0px;
+    margin-left: 16%;
+    animation: effect-2 1s ease 1;
+}
+
+@keyframes effect{
+    0%{
+        margin-left: 100%;
+    }
+    50%{
+        margin-left: 18%;
+    }
+    100%{
+        margin-left: -67%;
+    }
+}
+@keyframes effect-2{
+    0%{
+        margin-top: -21%;
+        font-size: 12px;
+    }
+    100%{
+        margin-top: 200px;
+        font-size: 100px;
+    }
+}
+@keyframes effect-3{
+    0%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes run-three{
+    0%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(0deg);
+    }
+    25%{
+        transform: scale3d(0,0,0) translateX(2000px) translateY(500px) rotateZ(360deg);
+    }
+    50%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(720deg);
+    }
+    75%{
+        transform: scale3d(0,0,0) translateX(-2000px) translateY(-500px) rotateZ(-360deg);
+    }
+    100%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(-720deg);
+    }
+}
+@keyframes run-three2{
+    0%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(0deg);
+    }
+    25%{
+        transform: scale3d(0,0,0) translateX(-2000px) translateY(-500px) rotateZ(-360deg);
+    }
+    50%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(-720deg);
+    }
+    75%{
+        transform: scale3d(0,0,0) translateX(2000px) translateY(500px) rotateZ(360deg);
+    }
+    100%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(720deg);
+    }
+}

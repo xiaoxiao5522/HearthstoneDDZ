@@ -1,0 +1,126 @@
+.mask{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #000;
+	opacity: 0.6;
+	z-index: 9;
+}
+.animation-mask{
+	display: none;
+	width: 1280px;
+	height: 745px;
+	position: fixed;
+	z-index: 10;
+	margin-left: 100%;
+	margin-top: 100px;
+	animation: effect 2s ease 1;
+}
+.effect-1{
+	background: url('../images/theKingBoom.jpg');
+}
+.effect-2{
+	background: url(../images/timg.jpg) no-repeat;
+}
+.effect-3{
+	background: url(../images/plan.jpg) no-repeat;
+}
+.anthor{
+	display: none;
+	width: 1280px;
+	height: 745px;
+	position: fixed;
+	z-index: 10;
+	margin-left: 33%;
+	margin-top: 200px;
+	animation: effect-2 1s ease 1;
+}
+.lose{
+	background: url(../images/lose.jpg) no-repeat;
+}
+.lose_s{
+	width: 100px;
+	height: 100px;
+	color: #fff;
+	font-size: 0px;
+	margin-left: 16%;
+	animation: effect-2 1s ease 1;
+}
+.win{
+	background: url(../images/fuck.jpg) no-repeat;
+}
+.win_s{
+	width: 100px;
+	height: 100px;
+	color: #fff;
+	font-size: 0px;
+	margin-left: 16%;
+	animation: effect-2 1s ease 1;
+}
+
+@keyframes effect{
+	0%{
+		margin-left: 100%;
+	}
+	50%{
+		margin-left: 18%;
+	}
+	100%{
+		margin-left: -67%;
+	}
+}
+@keyframes effect-2{
+	0%{
+		margin-top: -21%;
+		font-size: 12px;
+	}
+	100%{
+		margin-top: 200px;
+		font-size: 100px;
+	}
+}
+@keyframes effect-3{
+	0%{
+		opacity: 0.6;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+@keyframes run-three{
+	0%{
+		transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(0deg);
+	}
+	25%{
+		transform: scale3d(0,0,0) translateX(2000px) translateY(500px) rotateZ(360deg);
+	}
+	50%{
+		transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(720deg);
+	}
+	75%{
+		transform: scale3d(0,0,0) translateX(-2000px) translateY(-500px) rotateZ(-360deg);
+	}
+	100%{
+		transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(-720deg);
+	}
+}
+@keyframes run-three2{
+	0%{
+		transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(0deg);
+	}
+	25%{
+		transform: scale3d(0,0,0) translateX(-2000px) translateY(-500px) rotateZ(-360deg);
+	}
+	50%{
+		transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(-720deg);
+	}
+	75%{
+		transform: scale3d(0,0,0) translateX(2000px) translateY(500px) rotateZ(360deg);
+	}
+	100%{
+		transform: scale3d(1,1,1) translateX(0px) translateY(0px) rotateZ(720deg);
+	}
+}
